@@ -1,6 +1,6 @@
 function init() {
     //using d3 read data and create drop down menu
-    d3.json("samples.json").then((sampleData) => {
+    d3.json("./Code/samples.json").then((sampleData) => {
         
         let dropmenu = d3.select("#selDataset");
         let names = sampleData.names;
@@ -16,7 +16,7 @@ function init() {
 
 
 function createplots(names) {
-    d3.json("samples.json").then((sampleData) => {
+    d3.json("./Code/samples.json").then((sampleData) => {
         //metadata for demographic table
         let metadata = sampleData.metadata;
         let Table1 = d3.select("#sample-metadata");
